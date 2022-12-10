@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Артефакты</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            font-size: 18px;
+            background: #D6FF6B;
+            color: #000;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            height: 100vh;
+            gap: 30px;
+        }
+        .title {
+            margin: 0;
+        }
+        .choice {
+            display: flex;
+            justify-content: space-between;
+            width: 30%;
+        }
+        .btn {
+            font: inherit;
+            border: none;
+            width: 150px;
+            padding: 15px;
+            border-radius: 10px;
+            background: #5988FF;
+            color: #fff;
+            cursor: pointer;
+        }
+        .block {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        img {
+            width: 50%;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 class="title">Ты уже все сделал?</h1>
+    <div class="choice">
+        <button id="yes" class="btn">Да!</button>
+        <button id="no" class="btn">Нет</button>
+    </div>
+    
+    <script>
+        document.querySelector('#yes').addEventListener('click', function(){
+            document.querySelector('body').innerHTML = '<div class="block"><img src="https://i.ibb.co/LPxg3GR/image.png"><p>Молодец! Быстрее забирай свой артефакт</p></div>'
+        })
+        document.querySelector('#no').addEventListener('click', function(){
+            alert('Скорее переходи к заданию и сдай его!')
+        })
+    </script>
+</body>
+</html>
